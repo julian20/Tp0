@@ -7,9 +7,9 @@ import main.java.ar.fiuba.tecnicas.rockpaperscissors.*;
 
 public class RulesTest {
 
-    private Rock rock = new Rock();
-    private Paper paper = new Paper();
-    private Scissors scissors = new Scissors();
+    private IMove rock = new Rock();
+    private IMove paper = new Paper();
+    private IMove scissors = new Scissors();
 
     @Test
     public void rockBeatsScissors() {

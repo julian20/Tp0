@@ -1,19 +1,26 @@
 package main.java.ar.fiuba.tecnicas.rockpaperscissors;
 
-public class Paper {
+public class Paper implements IMove{
 
-	public Paper vs(Paper paper)
-	{
+	@Override
+	public IMove vs(IMove move) {
+		return move.vs(this);
+	}
+
+	@Override
+	public IMove vs(Rock move) {
 		return this;
 	}
-	
-	public Paper vs(Rock rock)
-	{
+
+	@Override
+	public IMove vs(Paper move) {
 		return this;
 	}
-	
-	public Scissors vs(Scissors scissors)
-	{
-		return scissors;
+
+	@Override
+	public IMove vs(Scissors move) {
+		return move;
 	}
+
+	
 }
